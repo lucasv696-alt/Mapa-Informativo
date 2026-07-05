@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Obelisco",
+    "categoria": "Monumento",
+    "latitud": -34.6037,
+    "longitud": -58.3816,
+    "direccion": "Av. 9 de Julio",
+    "telefono": "",
+    "descripcion": "Primer lugar del proyecto."
+  },
+  {
+    "id": 2,
+    "nombre": "Congreso de la Nación",
+    "categoria": "Edificio",
+    "latitud": -34.6098,
+    "longitud": -58.3925,
+    "direccion": "Av. Entre Ríos 1033",
+    "telefono": "",
+    "descripcion": "Segundo lugar."
+  },
+  {
+    "id": 3,
+    "nombre": "Casa Rosada",
+    "categoria": "Edificio",
+    "latitud": -34.608093,
+    "longitud": -58.370266,
+    "direccion": "Plaza de Mayo",
+    "telefono": "",
+    "descripcion": "Tercer lugar."
+  }
+]
