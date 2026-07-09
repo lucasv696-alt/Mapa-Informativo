@@ -1,26 +1,15 @@
-const map = L.map('map').setView([-34.6037, -58.3816], 13);
+// app.js
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap'
-}).addTo(map);
+async function iniciarAplicacion() {
 
-fetch('data/lugares.json')
-    .then(response => response.json())
-    .then(lugares => {
+    const mapa = crearMapa();
 
-        lugares.forEach(lugar => {
+    const lugares = await cargarLugares();
 
-            L.marker([lugar.latitud, lugar.longitud])
-                .addTo(map)
-                .bindPopup(`
-                    <strong>${lugar.nombre}</strong><br>
-                    ${lugar.direccion}<br>
-                    ${lugar.descripcion}
-                `);
+ const marcadores = crearMarcadores(mapa, lugares);
 
-        });
+crearSidebar(mapa, marcadores);
 
-    })
-    .catch(error => {
-        console.error("Error al cargar los lugares:", error);
-    });
+}
+
+iniciarAplicacion();

@@ -1,0 +1,33 @@
+.sidebar {
+    width: 320px;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+#lista-lugares {
+    margin-top: 15px;
+}
+
+.lugar-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.lugar-item:hover {
+    background: #f5f5f5;
+    border-color: #4CAF50;
+}
