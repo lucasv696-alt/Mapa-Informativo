@@ -6,9 +6,11 @@ async function iniciarAplicacion() {
 
     const lugares = await cargarLugares();
 
- const marcadores = crearMarcadores(mapa, lugares);
+    const marcadores = crearMarcadores(mapa, lugares);
 
-crearSidebar(mapa, marcadores);
+    crearSidebar(mapa, marcadores);
+
+    activarBuscador(mapa, marcadores);
 
 }
 

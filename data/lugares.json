@@ -1,14 +1,19 @@
 [
-  {
-    "id": 1,
-    "nombre": "Obelisco",
-    "categoria": "Monumento",
-    "latitud": -34.6037,
-    "longitud": -58.3816,
-    "direccion": "Av. 9 de Julio",
-    "telefono": "",
-    "descripcion": "Primer lugar del proyecto."
-  },
+{
+  "id": 1,
+  "nombre": "Obelisco",
+  "categoria": "Monumento",
+  "latitud": -34.6037,
+  "longitud": -58.3816,
+  "direccion": "Av. 9 de Julio",
+  "telefono": "",
+  "web": "",
+  "descripcion": "Primer lugar del proyecto.",
+  "plano": "planos/plano-salon.jpg",
+  "imagenes": [],
+  "planos": [],
+  "documentos": []
+},
   {
     "id": 2,
     "nombre": "Congreso de la Nación",

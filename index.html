@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/sidebar.css">>
+<link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
 
@@ -28,17 +28,23 @@
 
 <hr>
 
-<button>⚙ Configuración</button>>
+<button>⚙ Configuración</button>
 
     </aside>
 
-    <main>
+<main>
 
-        <div id="map"></div>
+    <div id="map"></div>
 
-    </main>
+    <aside id="panel-info">
 
-</div>
+        <h2>Información</h2>
+
+        <p>Seleccione un lugar en el mapa o en la lista.</p>
+
+    </aside>
+
+</main>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -51,5 +57,12 @@
 
 <script src="js/app.js"></script>
 
+<div id="visor-plano" class="oculto">
+
+    <span id="cerrar-plano" onclick="cerrarPlano()">&times;</span>
+
+    <img id="imagen-plano-grande" src="" alt="Plano">
+
+</div>
 </body>
 </html>
