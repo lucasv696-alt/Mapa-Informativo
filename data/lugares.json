@@ -1,37 +1,506 @@
 [
-{
-  "id": 1,
-  "nombre": "Obelisco",
-  "categoria": "Monumento",
-  "latitud": -34.6037,
-  "longitud": -58.3816,
-  "direccion": "Av. 9 de Julio",
-  "telefono": "",
-  "web": "",
-  "descripcion": "Primer lugar del proyecto.",
-  "plano": "planos/plano-salon.jpg",
-  "imagenes": [],
-  "planos": [],
-  "documentos": []
-},
   {
-    "id": 2,
-    "nombre": "Congreso de la Nación",
-    "categoria": "Edificio",
-    "latitud": -34.6098,
-    "longitud": -58.3925,
-    "direccion": "Av. Entre Ríos 1033",
-    "telefono": "",
-    "descripcion": "Segundo lugar."
+    "id": 1,
+    "nombre": "Lugar de Asamblea",
+    "categoria": "Lugar de Asamblea",
+    "latitud": -32.47537443931704,
+    "longitud": -58.22812788216464,
+    "direccion": "Sta. María de Oro 500-598, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
   },
   {
+    "id": 2,
+    "nombre": "YPF Galarza",
+    "categoria": "Estación de servicio",
+    "latitud": -32.4874364524461,
+    "longitud": -58.25141924558378,
+    "direccion": "Galarza, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
     "id": 3,
-    "nombre": "Casa Rosada",
-    "categoria": "Edificio",
-    "latitud": -34.608093,
-    "longitud": -58.370266,
-    "direccion": "Plaza de Mayo",
-    "telefono": "",
-    "descripcion": "Tercer lugar."
-  }
+    "nombre": "YPF Ugarteche",
+    "categoria": "Estación de servicio",
+    "latitud": -32.484101900007296,
+    "longitud": -58.22985193529423,
+    "direccion": "Ugarteche, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 4,
+    "nombre": "AXION energy",
+    "categoria": "Estación de servicio",
+    "latitud": -32.487131405365645,
+    "longitud": -58.25017136784822,
+    "direccion": "Galarza, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 5,
+    "nombre": "Shell El Mirador",
+    "categoria": "Estación de servicio",
+    "latitud": -32.4852864199467,
+    "longitud": -58.241303942538416,
+    "direccion": "Galarza y Scelzi, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 6,
+    "nombre": "Gulf",
+    "categoria": "Estación de servicio",
+    "latitud": -32.486869332460955,
+    "longitud": -58.3006372055793,
+    "direccion": "RP39, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 7,
+    "nombre": "Oil Service Station",
+    "categoria": "Estación de servicio",
+    "latitud": -32.4788281924917,
+    "longitud": -58.262604912411845,
+    "direccion": "Bulevar Ricardo Balbín, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 8,
+    "nombre": "Estación de Servicio GNC / Nafta / Diésel",
+    "categoria": "Estación de servicio",
+    "latitud": -32.47831908988198,
+    "longitud": -58.24392034474307,
+    "direccion": "Bulevar Los Constituyentes y Lorenzo Sartorio, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 9,
+    "nombre": "Terminal de Ómnibus de Concepción del Uruguay",
+    "categoria": "Terminal",
+    "latitud": -32.48527722286293,
+    "longitud": -58.24240654653388,
+    "direccion": "",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 10,
+    "nombre": "Hospital Justo José de Urquiza",
+    "categoria": "Hospital",
+    "latitud": -32.48123112547134,
+    "longitud": -58.26108310249592,
+    "direccion": "Uncal 450, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 11,
+    "nombre": "Clínica Uruguay",
+    "categoria": "Hospital",
+    "latitud": -32.48337980648813,
+    "longitud": -58.23028888127785,
+    "direccion": "J. J. de Urquiza 844, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 12,
+    "nombre": "Farmacia Moderna",
+    "categoria": "Farmacia",
+    "latitud": -32.48572775838192,
+    "longitud": -58.23811563680601,
+    "direccion": "9 de Julio 1052, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 13,
+    "nombre": "Farmacia San Roque",
+    "categoria": "Farmacia",
+    "latitud": -32.48811602265489,
+    "longitud": -58.231554237614894,
+    "direccion": "Mariano Moreno 249, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 14,
+    "nombre": "Farmacia Modelo",
+    "categoria": "Farmacia",
+    "latitud": -32.48303957101392,
+    "longitud":  -58.23064400703937,
+    "direccion": "Supremo Entrerriano 94, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 15,
+    "nombre": "Farmacia Entre Ríos",
+    "categoria": "Farmacia",
+    "latitud": -32.48072055217086,
+    "longitud": -58.23365866023119,
+    "direccion": "Justo José de Urquiza 288, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 16,
+    "nombre": "Farmacia Santa Teresita - Las Rinas",
+    "categoria": "Farmacia",
+    "latitud": -32.47716361529089, 
+    "longitud": -58.23379431236077,
+    "direccion": "Blvd. Hipólito Yrigoyen 712, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 17,
+    "nombre": "Farmacias Villegas Del Pueblo 2",
+    "categoria": "Farmacia",
+    "latitud": -32.48711055441161,
+    "longitud": -58.27849656453403,
+    "direccion": "",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 18,
+    "nombre": "Banco Nación",
+    "categoria": "Banco",
+    "latitud": -32.48542572253703,
+    "longitud": -58.23384693395291,
+    "direccion": "España 49, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 19,
+    "nombre": "Banco Entre Ríos",
+    "categoria": "Banco",
+    "latitud": -32.48512662395594,
+    "longitud": -58.24307377832196,
+    "direccion": "Gral. Galarza 1330, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 20,
+    "nombre": "Banco Galicia",
+    "categoria": "Banco",
+    "latitud": -32.482515166627465,
+    "longitud": -58.234145360942826,
+    "direccion": "8 de Junio 800, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 21,
+    "nombre": "Banco Santander",
+    "categoria": "Banco",
+    "latitud": -32.48468442060141,
+    "longitud": -58.23115906094273,
+    "direccion": "Juan Domingo Perón 34, Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 22,
+    "nombre": "BBVA",
+    "categoria": "Banco",
+    "latitud": -32.48501924295695,
+    "longitud": -58.23505110810979,
+    "direccion": "9 de Julio 876, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 23,
+    "nombre": "Banco Macro",
+    "categoria": "Banco",
+    "latitud": -32.48517349595421,
+    "longitud": -58.23459619436458,
+    "direccion": "Leandro N. Alem 12, esquina 9 de Julio, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 24,
+    "nombre": "Banco Patagonia",
+    "categoria": "Banco",
+    "latitud": -32.484957427807934,
+    "longitud": -58.23426477373701,
+    "direccion": "9 de Julio 829, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 25,
+    "nombre": "Banco Credicoop",
+    "categoria": "Banco",
+    "latitud": -32.48511683474089,
+    "longitud": -58.23443610978826,
+    "direccion": "9 de Julio 835, E3260 Concepción del Uruguay, Entre Ríos",
+    "descripcion": "",
+    "plano": ""
+},
+{
+    "id": 26,
+    "nombre": "El Calderón",
+    "categoria": "Restaurante",
+    "latitud": -32.482164741763526,
+    "longitud": -58.30028331998216,
+    "calificacion": 4.7,
+    "googleMaps": ""
+},
+{
+    "id": 27,
+    "nombre": "Parrilla La Gruta",
+    "categoria": "Restaurante",
+    "latitud": -32.47709117622167, 
+    "longitud": -58.30452701775657,
+    "calificacion": 4.6
+},
+{
+    "id": 28,
+    "nombre": "La Carmela",
+    "categoria": "Restaurante",
+    "latitud": -32.476870198676664,
+    "longitud": -58.2297705168037,
+    "calificacion": 4.6
+},
+{
+    "id": 29,
+    "nombre": "Baco Fusión Restaurant",
+    "categoria": "Restaurante",
+    "latitud": -32.48146253523596,
+    "longitud": -58.2228057944901,
+    "calificacion": 4.5
+},
+{
+    "id": 30,
+    "nombre": "Dolores Costa",
+    "categoria": "Restaurante",
+    "latitud": -32.48670287449946, 
+    "longitud": -58.248135686385154,
+    "calificacion": 4.5
+},
+{
+    "id": 31,
+    "nombre": "Garifo",
+    "categoria": "Restaurante",
+    "latitud": -32.48764224222119,
+    "longitud": -58.23334199921722,
+    "calificacion": 4.4
+},
+{
+    "id": 32,
+    "nombre": "Bonhomía Resto Bar",
+    "categoria": "Restaurante",
+    "latitud":  -32.47905184501397,
+    "longitud": -58.22214524667064,
+    "calificacion": 4.4
+},
+{
+    "id": 33,
+    "nombre": "El Faro",
+    "categoria": "Restaurante",
+    "latitud": -32.49608394375392,
+    "longitud": -58.226322494485565,
+    "calificacion": 4.4
+},
+{
+    "id": 34,
+    "nombre": "Restaurant La Delfina",
+    "categoria": "Restaurante",
+    "latitud": -32.482674309452506,
+    "longitud": -58.23171370520158,
+    "calificacion": 4.2
+},
+{
+    "id": 35,
+    "nombre": "El Danubio Azul",
+    "categoria": "Restaurante",
+    "latitud": -32.48555774714053,
+    "longitud": -58.23292265353561,
+    "calificacion": 4.2
+},
+{
+    "id": 36,
+    "nombre": "Pimienta Negra",
+    "categoria": "Restaurante",
+    "latitud":  -32.48584587964206,
+    "longitud": -58.23919633253275,
+    "calificacion": 4.0
+},
+{
+    "id": 37,
+    "nombre": "Bartolo Bar",
+    "categoria": "Restaurante",
+    "latitud":  -32.48564524347523,
+    "longitud": -58.23271990166444,
+    "calificacion": 4.0
+},
+{
+    "id": 38,
+    "nombre": "Helena Café Resto",
+    "categoria": "Cafetería",
+    "latitud": -32.483986490711686,
+    "longitud": -58.23319123618672,
+    "calificacion": 4.2
+},
+{
+    "id": 39,
+    "nombre": "Bella Vista",
+    "categoria": "Cafetería",
+    "latitud": -32.484895044411964,
+    "longitud": -58.23302721088635,
+    "calificacion": 4.4
+},
+{
+    "id": 40,
+    "nombre": "Nero Café de Especialidad",
+    "categoria": "Cafetería",
+    "latitud":  -32.484021394116425,
+    "longitud": -58.23142151607391,
+    "calificacion": 4.8
+},
+{
+    "id": 41,
+    "nombre": "Cultura Café",
+    "categoria": "Cafetería",
+    "latitud": -32.475951516318254,
+    "longitud": -58.226739136597914,
+    "calificacion": 4.7
+},
+{
+    "id": 42,
+    "nombre": "La Quinta Sabores Entrerrianos",
+    "categoria": "Cafetería",
+    "latitud":  -32.492485747601904,
+    "longitud": -58.229903895452,
+    "calificacion": 4.5
+},
+{
+    "id": 43,
+    "nombre": "La Ris",
+    "categoria": "Cafetería",
+    "latitud": -32.483956710141385,
+    "longitud": -58.23300666125978,
+    "calificacion": 4.5
+},
+{
+    "id": 44,
+    "nombre": "Supermercado Gran Rex",
+    "categoria": "Supermercado",
+    "latitud": -32.489160522372394,
+    "longitud": -58.230233993759896
+},
+{
+    "id": 45,
+    "nombre": "Supermercados Día",
+    "categoria": "Supermercado",
+    "latitud": -32.48845446305269,
+    "longitud": -58.2416646917285
+},
+{
+    "id": 46,
+    "nombre": "Supermercado Supremo",
+    "categoria": "Supermercado",
+    "latitud": -32.486214375986336,
+    "longitud": -58.232583807069915
+},
+{
+    "id": 47,
+    "nombre": "Maycon Autoservicio Mayorista",
+    "categoria": "Supermercado",
+    "latitud": -32.486908135327184,
+    "longitud": -58.278830735993935
+},
+{
+    "id": 48,
+    "nombre": "Supermercado Martín",
+    "categoria": "Supermercado",
+    "latitud": -32.47286244110245,
+    "longitud": -58.23702072657426
+},
+{
+    "id": 49,
+    "nombre": "Supermercado RT",
+    "categoria": "Supermercado",
+    "latitud": -32.485059307228525,
+    "longitud": -58.25016458718946
+},
+{
+    "id": 50,
+    "nombre": "Remisería Voy!",
+    "categoria": "Remises",
+    "latitud": -32.480321543111025,
+    "longitud": -58.228481724039284,
+    "telefono": "3442 32-2000"
+},
+{
+    "id": 52,
+    "nombre": "Acción Remises",
+    "categoria": "Remises",
+    "latitud": -32.47877754772613,
+    "longitud": -58.232724354298355,
+    "telefono": "3442 64-1200"
+},
+{
+    "id": 53,
+    "nombre": "TAO Remises",
+    "categoria": "Remises",
+    "latitud": -32.48853690026868,
+    "longitud": -58.242130227240445,
+    "telefono": "3442 54-2772"
+},
+{
+    "id": 54,
+    "nombre": "Remises Concepción",
+    "categoria": "Remises",
+    "latitud": -32.48703652876836,
+    "longitud": -58.245690997332495,
+    "telefono": "3442 66-7570"
+},
+{
+    "id": 55,
+    "nombre": "Jefatura Departamental Uruguay",
+    "categoria": "Policía",
+    "latitud": -32.48538771400433,
+    "longitud": -58.23211562750811
+},
+{
+    "id": 56,
+    "nombre": "Comisaría Primera",
+    "categoria": "Policía",
+    "latitud": -32.47814623240814,
+    "longitud": -58.25149305817908
+},
+{
+    "id": 57,
+    "nombre": "Comisaría Segunda",
+    "categoria": "Policía",
+    "latitud": -32.488491323973754,
+    "longitud": -58.25991321018806
+},
+{
+    "id": 58,
+    "nombre": "Comisaría Tercera",
+    "categoria": "Policía",
+    "latitud": -32.473518677479234,
+    "longitud": -58.25416631902764
+},
+{
+    "id": 59,
+    "nombre": "Comisaría Cuarta",
+    "categoria": "Policía",
+    "latitud": -32.49196937407968,
+    "longitud": -58.278316445673624
+}
 ]

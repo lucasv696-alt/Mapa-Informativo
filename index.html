@@ -6,63 +6,130 @@
     <title>Mapa Informativo</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/sidebar.css">
+
 </head>
 <body>
 
-<div class="container">
+<body>
 
-    <aside class="sidebar">
+<!-- Pantalla de bienvenida -->
+<div id="pantalla-bienvenida">
+
+    <div class="bienvenida-contenido">
+
+        <img src="img/jworg.svg"
+             alt="JW.ORG"
+             class="bienvenida-logo">
+
+        <h1>¡Bienvenido a la Asamblea Regional!</h1>
 
         <h2>🗺️ Mapa Informativo</h2>
 
-<input
-    type="text"
-    placeholder="Buscar ubicación..."
-    id="buscador">
+        <p class="bienvenida-texto">
+            Este mapa le ayudará a encontrar fácilmente
+            los principales servicios cercanos al
+            Lugar de Asamblea.
+        </p>
 
-<h3>📍 Lugares</h3>
+        <div class="bienvenida-iconos" id="bienvenida-iconos"></div>
 
-<div id="lista-lugares"></div>
+        <p class="bienvenida-menu">
+            ☰ Utilice el botón del menú para explorar el mapa.
+        </p>
 
-<hr>
+        <button id="btn-comenzar">
+            Comenzar
+        </button>
 
-<button>⚙ Configuración</button>
+    </div>
+
+</div>
+
+<button id="menu-toggle">☰</button>
+
+<div id="menu-backdrop"></div>
+
+<div class="container">
+
+    <aside class="sidebar" id="sidebar">
+
+        <h2>🗺️ Mapa Informativo</h2>
+
+        <div class="contenedor-buscador">
+
+            <input
+                type="text"
+                placeholder="Buscar ubicación..."
+                id="buscador">
+
+            <div id="resultados-busqueda"></div>
+
+        </div>
+
+        <h3 class="titulo-seccion">Categorías</h3>
+
+        <div id="lista-categorias"></div>
+
+        <h3 class="titulo-seccion"
+            id="contador-lugares"
+            style="display:none;">
+        </h3>
+
+        <div id="contenedor-lugares" style="display:none;">
+            <div id="lista-lugares"></div>
+        </div>
 
     </aside>
 
-<main>
+    <main>
 
-    <div id="map"></div>
+        <div id="map"></div>
 
-    <aside id="panel-info">
+    </main>
 
-        <h2>Información</h2>
+</div> <!-- Fin de container -->
 
-        <p>Seleccione un lugar en el mapa o en la lista.</p>
+<!-- Visor del plano -->
 
-    </aside>
+<div id="visor-plano">
 
-</main>
+    <button id="cerrar-plano">✕</button>
+
+    <div id="contenedor-plano">
+
+        <img
+            id="imagen-plano"
+            src="img/planos/salon_asambleas.svg"
+            alt="Plano del Salón de Asambleas">
+
+    </div>
+
+</div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script src="js/mapa.js"></script>
 <script src="js/datos.js"></script>
+
+<script src="js/iconos.js"></script>
 <script src="js/marcadores.js"></script>
 
 <script src="js/sidebar.js"></script>
 <script src="js/buscador.js"></script>
+<script src="js/categorias.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/bienvenida.js"></script>
 
+<script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+
+<script src="js/plano.js"></script>
 <script src="js/app.js"></script>
 
-<div id="visor-plano" class="oculto">
-
-    <span id="cerrar-plano" onclick="cerrarPlano()">&times;</span>
-
-    <img id="imagen-plano-grande" src="" alt="Plano">
-
-</div>
 </body>
+
 </html>

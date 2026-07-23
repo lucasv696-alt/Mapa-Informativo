@@ -1,52 +1,158 @@
+/* ======================================================
+   SIDEBAR
+====================================================== */
+
 .sidebar {
     width: 320px;
-    background: #ffffff;
-    border-right: 1px solid #ddd;
-    padding: 20px;
-    overflow-y: auto;
+    background: white;
+    border-right: 1px solid #dfe5eb;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: 2px 0 8px rgba(0, 0, 0, .05);
+    z-index: 1000;
 }
 
 .sidebar h2 {
-    margin-top: 0;
+    text-align: center;
+
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eceff3;
 }
 
+
+/* ======================================================
+   LISTA DE LUGARES
+====================================================== */
+
 #lista-lugares {
-    margin-top: 15px;
+    margin-top: 6px;
 }
 
 .lugar-item {
     padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    margin-bottom: 8px;
+
+    background: #dbeafe;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
     cursor: pointer;
-    transition: 0.2s;
-    background: white;
+
+    transition: all .18s ease;
 }
 
 .lugar-item:hover {
-    background: #f5f5f5;
-    border-color: #4CAF50;
+    background: #f8fafc;
+    border-color: #2563eb;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
 }
+
+.lugar-item.activo {
+    background: #eaf3ff;
+    border-color: #2563eb;
+    color: #1f2937;
+}
+
+
+/* ======================================================
+   CONTENIDO DE LAS TARJETAS
+====================================================== */
 
 .lugar-item strong {
     display: block;
+    margin-bottom: 4px;
+
     font-size: 15px;
 }
 
 .lugar-item small {
     color: #666;
 }
-.lugar-item.activo {
-    background: #dbeafe;
-    border-color: #2563eb;
+#resultados-busqueda{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    right:0;
+
+    margin-top:6px;
+
+    background:white;
+
+    border:1px solid #dfe5eb;
+
+    border-radius:10px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    z-index:5000;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
 }
 
-.lugar-item strong {
-    display: block;
-    margin-bottom: 4px;
+.resultado-busqueda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    transition:.18s;
+
 }
 
-.lugar-item small {
-    color: #666;
+.resultado-busqueda:hover{
+
+    background:#f3f7ff;
+
+}
+
+.resultado-icono{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+.resultado-nombre{
+
+    font-size:14px;
+
+    color:#374151;
+
+}
+.contenedor-buscador{
+
+    position:relative;
+
 }

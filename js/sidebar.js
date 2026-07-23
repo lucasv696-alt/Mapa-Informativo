@@ -1,6 +1,22 @@
+/*
+=========================================================
+ sidebar.js
+
+ Crea la lista de lugares del menú lateral y administra
+ el contador de lugares visibles.
+
+=========================================================
+*/
+
+
+// ======================================================
+// CREAR SIDEBAR
+// ======================================================
+
 function crearSidebar(mapa, marcadores) {
 
     const lista = document.getElementById("lista-lugares");
+
     lista.innerHTML = "";
 
     marcadores.forEach(item => {
@@ -8,6 +24,9 @@ function crearSidebar(mapa, marcadores) {
         const tarjeta = document.createElement("div");
 
         tarjeta.className = "lugar-item";
+
+        tarjeta.dataset.categoria = item.lugar.categoria;
+        tarjeta.dataset.nombre = item.lugar.nombre.toLowerCase();
         tarjeta.dataset.id = item.lugar.id;
 
         tarjeta.innerHTML = `
@@ -17,106 +36,47 @@ function crearSidebar(mapa, marcadores) {
 
         tarjeta.addEventListener("click", () => {
 
+            // Quitar selección anterior
             document.querySelectorAll(".lugar-item").forEach(t =>
                 t.classList.remove("activo")
             );
 
+            // Seleccionar la tarjeta actual
             tarjeta.classList.add("activo");
 
+            // Centrar mapa
             mapa.setView(
                 [item.lugar.latitud, item.lugar.longitud],
                 16
             );
 
+            // Abrir popup
             item.marcador.openPopup();
 
-            actualizarPanel(item.lugar);
-
         });
+
+        // Guardar referencia para usar desde otros archivos
+        item.tarjeta = tarjeta;
 
         lista.appendChild(tarjeta);
 
     });
 
-}
-
-function actualizarPanel(lugar){
-
-    lugarSeleccionado = lugar;
-
-    const panel = document.getElementById("panel-info");
-const botonPlano = lugar.plano
-    ? `
-        <button class="boton-plano" onclick="verPlano('${lugar.plano}')">
-            📄 Ver plano
-        </button>
-      `
-    : "";
-    panel.innerHTML = `
-    <h2>${lugar.nombre}</h2>
-
-    <p><strong>Categoría:</strong> ${lugar.categoria}</p>
-
-    <p><strong>Dirección:</strong><br>${lugar.direccion}</p>
-
-    <p>${lugar.descripcion}</p>
-
-    <hr>
-
-    <a
-        class="boton-ruta"
-        target="_blank"
-        href="https://www.google.com/maps/dir/?api=1&destination=${lugar.latitud},${lugar.longitud}">
-        🧭 Cómo llegar
-    </a>
-    ${botonPlano}
-`;
-}
-function verPlano(ruta){
-
-    const panel = document.getElementById("panel-info");
-
-    panel.innerHTML = `
-        <button class="boton-volver" onclick="volverPanel()">
-            ⬅ Volver
-        </button>
-
-        <h2>Plano</h2>
-
-        <img
-    src="${ruta}"
-    class="imagen-plano"
-    alt="Plano"
-    onclick="ampliarPlano('${ruta}')">
-    `;
+    actualizarContadorLugares();
 
 }
-let lugarSeleccionado = null;
 
-function volverPanel(){
 
-    if(lugarSeleccionado){
+// ======================================================
+// CONTADOR DE LUGARES
+// ======================================================
 
-        actualizarPanel(lugarSeleccionado);
+function actualizarContadorLugares() {
 
-    }
+    const visibles = document.querySelectorAll(
+        "#lista-lugares .lugar-item:not([style*='display: none'])"
+    ).length;
 
-}
-function ampliarPlano(ruta){
-
-    document
-        .getElementById("imagen-plano-grande")
-        .src = ruta;
-
-    document
-        .getElementById("visor-plano")
-        .classList.remove("oculto");
-
-}
-function cerrarPlano(){
-
-    document
-        .getElementById("visor-plano")
-        .classList.add("oculto");
+    document.getElementById("contador-lugares").textContent = visibles;
 
 }
