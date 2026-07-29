@@ -16,6 +16,7 @@
 function crearCategorias(mapa, marcadores) {
 
     const contenedor = document.getElementById("lista-categorias");
+    const botonToggle = document.getElementById("btn-toggle-categorias");
 
     contenedor.innerHTML = "";
 
@@ -49,33 +50,16 @@ function crearCategorias(mapa, marcadores) {
 
         checkbox.dataset.categoria = categoria;
 
-        // Evento al marcar o desmarcar una categoría
         checkbox.addEventListener("change", () => {
 
-            // Mostrar u ocultar marcadores
-            marcadores.forEach(item => {
+            actualizarCategoria(
+                mapa,
+                marcadores,
+                categoria,
+                checkbox.checked
+            );
 
-                if (item.lugar.categoria !== categoria) return;
-
-                if (checkbox.checked) {
-                    item.marcador.addTo(mapa);
-                } else {
-                    item.marcador.remove();
-                }
-
-            });
-
-            // Mostrar u ocultar tarjetas
-            document.querySelectorAll(".lugar-item").forEach(tarjeta => {
-
-                if (tarjeta.dataset.categoria !== categoria) return;
-
-                tarjeta.style.display = checkbox.checked ? "" : "none";
-
-            });
-
-            // Actualizar contador
-            actualizarContadorLugares();
+            actualizarTextoBoton();
 
         });
 
@@ -83,5 +67,97 @@ function crearCategorias(mapa, marcadores) {
         contenedor.appendChild(document.createElement("br"));
 
     });
+
+    // ==========================================
+    // BOTÓN SELECCIONAR / DESELECCIONAR TODAS
+    // ==========================================
+
+    botonToggle.addEventListener("click", () => {
+
+        const checkboxes = contenedor.querySelectorAll(
+            'input[type="checkbox"]'
+        );
+
+        const todasMarcadas = [...checkboxes].every(cb => cb.checked);
+
+        checkboxes.forEach(cb => {
+
+            cb.checked = !todasMarcadas;
+
+            actualizarCategoria(
+                mapa,
+                marcadores,
+                cb.dataset.categoria,
+                cb.checked
+            );
+
+        });
+
+        actualizarTextoBoton();
+
+    });
+
+    actualizarTextoBoton();
+
+}
+
+
+
+// ======================================================
+// MOSTRAR / OCULTAR UNA CATEGORÍA
+// ======================================================
+
+function actualizarCategoria(
+    mapa,
+    marcadores,
+    categoria,
+    visible
+) {
+
+    marcadores.forEach(item => {
+
+        if (item.lugar.categoria !== categoria) return;
+
+        if (visible) {
+            item.marcador.addTo(mapa);
+        } else {
+            item.marcador.remove();
+        }
+
+    });
+
+    document.querySelectorAll(".lugar-item").forEach(tarjeta => {
+
+        if (tarjeta.dataset.categoria !== categoria) return;
+
+        tarjeta.style.display = visible ? "" : "none";
+
+    });
+
+    actualizarContadorLugares();
+
+}
+
+
+
+// ======================================================
+// ACTUALIZAR TEXTO DEL BOTÓN
+// ======================================================
+
+function actualizarTextoBoton() {
+
+    const boton = document.getElementById("btn-toggle-categorias");
+
+    const checkboxes = document.querySelectorAll(
+        '#lista-categorias input[type="checkbox"]'
+    );
+
+    const todasMarcadas = [...checkboxes].every(cb => cb.checked);
+
+    boton.innerHTML = todasMarcadas
+
+        ? `<i class="fa-regular fa-eye-slash"></i> Ocultar todas`
+
+        : `<i class="fa-regular fa-eye"></i> Mostrar todas`;
 
 }

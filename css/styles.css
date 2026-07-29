@@ -1217,3 +1217,48 @@ body.menu-abierto #menu-toggle{
 }
 
 }
+/* =======================================
+   Cabecera categorías
+======================================= */
+
+.cabecera-categorias{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.btn-toggle-categorias{
+
+    background:none;
+
+    border:none;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    padding:0;
+
+}
+.btn-toggle-categorias i{
+
+    margin-right:6px;
+
+    font-size:14px;
+
+}
+.btn-toggle-categorias:hover{
+
+    text-decoration:underline;
+
+}
