@@ -1,134 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mapa Informativo</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css">
 
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 
 </head>
-<body>
 
 <body>
 
-<!-- Pantalla de bienvenida -->
-<div id="pantalla-bienvenida">
+    <!-- ===================================================== -->
+    <!-- Pantalla de bienvenida -->
+    <!-- ===================================================== -->
 
-    <div class="bienvenida-contenido">
-
-        <img src="img/jworg.svg"
-             alt="JW.ORG"
-             class="bienvenida-logo">
-
-        <h1>¡Bienvenido a la Asamblea Regional!</h1>
-
-        <h2>🗺️ Mapa Informativo</h2>
-
-        <p class="bienvenida-texto">
-            Este mapa le ayudará a encontrar fácilmente
-            los principales servicios cercanos al
-            Lugar de Asamblea.
-        </p>
-
-        <div class="bienvenida-iconos" id="bienvenida-iconos"></div>
-
-        <p class="bienvenida-menu">
-            ☰ Utilice el botón del menú para explorar el mapa.
-        </p>
-
-        <button id="btn-comenzar">
-            Comenzar
-        </button>
-
-    </div>
-
-</div>
-
-<button id="menu-toggle">☰</button>
-
-<div id="menu-backdrop"></div>
-
-<div class="container">
-
-    <aside class="sidebar" id="sidebar">
-
-        <h2>🗺️ Mapa Informativo</h2>
-
-        <div class="contenedor-buscador">
-
-            <input
-                type="text"
-                placeholder="Buscar ubicación..."
-                id="buscador">
-
-            <div id="resultados-busqueda"></div>
-
-        </div>
-
-        <h3 class="titulo-seccion">Categorías</h3>
-
-        <div id="lista-categorias"></div>
-
-        <h3 class="titulo-seccion"
-            id="contador-lugares"
-            style="display:none;">
-        </h3>
-
-        <div id="contenedor-lugares" style="display:none;">
-            <div id="lista-lugares"></div>
-        </div>
-
-    </aside>
-
-    <main>
-
-        <div id="map"></div>
-
-    </main>
-
-</div> <!-- Fin de container -->
-
-<!-- Visor del plano -->
-
-<div id="visor-plano">
-
-    <button id="cerrar-plano">✕</button>
-
-    <div id="contenedor-plano">
+    <div id="pantalla-bienvenida">
 
         <img
-            id="imagen-plano"
-            src="img/planos/salon_asambleas.svg"
-            alt="Plano del Salón de Asambleas">
+            src="img/bienvenida/fondo-asamblea-2026.svg"
+            class="bienvenida-fondo"
+            alt="">
+
+        <div class="bienvenida-contenido">
+
+            <h1 class="titulo-mapa">
+                Mapa Informativo
+            </h1>
+
+            <p class="bienvenida-texto">
+                <strong>Encuentre fácilmente los principales servicios del Lugar de Asamblea.</strong>
+            </p>
+
+            <div id="bienvenida-iconos"
+                 class="bienvenida-iconos">
+            </div>
+
+            <button id="btn-comenzar">
+                Comenzar
+            </button>
+
+            <div class="programa-linea">
+
+                <span class="texto-programa">
+                    <i class="fa-solid fa-book-open"></i>
+                    Descargar programa
+                </span>
+
+                <a href="https://cfp2.jw-cdn.org/a/d4a97d4/2/o/CO-pgm26_S.pdf"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn-programa-pdf">
+
+                <i class="fa-solid fa-file-pdf"></i>
+                   PDF
+
+                </a>
+
+                <a href="https://cfp2.jw-cdn.org/a/05dc9e7/2/o/CO-pgm26_S.jwpub"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn-programa-jw">
+
+                   <i class="fa-solid fa-mobile-screen"></i>
+                     JW Library
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- ===================================================== -->
+    <!-- Botón menú -->
+    <!-- ===================================================== -->
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <button id="menu-toggle">
+        ☰
+    </button>
 
-<script src="js/mapa.js"></script>
-<script src="js/datos.js"></script>
+    <div id="menu-backdrop"></div>
 
-<script src="js/iconos.js"></script>
-<script src="js/marcadores.js"></script>
+    <!-- ===================================================== -->
+    <!-- Aplicación -->
+    <!-- ===================================================== -->
 
-<script src="js/sidebar.js"></script>
-<script src="js/buscador.js"></script>
-<script src="js/categorias.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/bienvenida.js"></script>
+    <div class="container">
 
-<script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+        <aside class="sidebar"
+               id="sidebar">
 
-<script src="js/plano.js"></script>
-<script src="js/app.js"></script>
+            <h2>🗺️ Mapa Informativo</h2>
+
+            <div class="contenedor-buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar ubicación...">
+
+                <div id="resultados-busqueda"></div>
+
+            </div>
+
+            <h3 class="titulo-seccion">
+                Categorías
+            </h3>
+
+            <div id="lista-categorias"></div>
+
+            <h3 class="titulo-seccion"
+                id="contador-lugares"
+                style="display:none;">
+            </h3>
+
+            <div id="contenedor-lugares"
+                 style="display:none;">
+
+                <div id="lista-lugares"></div>
+
+            </div>
+
+        </aside>
+
+        <main>
+
+            <div id="map"></div>
+
+        </main>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Visor del plano -->
+    <!-- ===================================================== -->
+
+    <div id="visor-plano">
+
+        <button id="cerrar-plano">
+            ✕
+        </button>
+
+        <div id="contenedor-plano">
+
+            <img
+                id="imagen-plano"
+                src="img/planos/salon_asambleas.svg"
+                alt="Plano del Salón de Asambleas">
+
+        </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Scripts -->
+    <!-- ===================================================== -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="js/mapa.js"></script>
+    <script src="js/datos.js"></script>
+
+    <script src="js/iconos.js"></script>
+    <script src="js/marcadores.js"></script>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/bienvenida.js"></script>
+
+    <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+
+    <script src="js/plano.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

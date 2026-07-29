@@ -5,13 +5,13 @@ function iniciarBienvenida() {
     const contenedor = document.getElementById("bienvenida-iconos");
 
     const categorias = [
-        "Lugar de Asamblea",
-        "Restaurante",
-        "Cafetería",
-        "Estación de servicio",
-        "Farmacia",
-        "Banco"
-    ];
+    "Hospital",
+    "Restaurante",
+    "Cafetería",
+    "Estación de servicio",
+    "Farmacia",
+    "Banco"
+];
 
     contenedor.innerHTML = "";
 

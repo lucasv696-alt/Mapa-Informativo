@@ -259,14 +259,6 @@
     "googleMaps": ""
 },
 {
-    "id": 27,
-    "nombre": "Parrilla La Gruta",
-    "categoria": "Restaurante",
-    "latitud": -32.47709117622167, 
-    "longitud": -58.30452701775657,
-    "calificacion": 4.6
-},
-{
     "id": 28,
     "nombre": "La Carmela",
     "categoria": "Restaurante",
@@ -348,6 +340,38 @@
 },
 {
     "id": 38,
+    "nombre": "Papa Luigi",
+    "categoria": "Restaurante",
+    "latitud":  -32.485714722266486,
+    "longitud": -58.235353599379565,
+    "calificacion": 4.4
+},
+{
+    "id": 39,
+    "nombre": "Pizza Libre Garden",
+    "categoria": "Restaurante",
+    "latitud":  -32.480927129886176,
+    "longitud": -58.23189370719421,
+    "calificacion": 3.9
+},
+{
+    "id": 40,
+    "nombre": "El Fogon de Gabriel",
+    "categoria": "Restaurante",
+    "latitud":  -32.48625565698838,
+    "longitud": -58.246709082245275,
+    "calificacion": 3.9
+},
+{
+    "id": 41,
+    "nombre": "Parrilla El Monumento",
+    "categoria": "Restaurante",
+    "latitud":  -32.48863442637938,
+    "longitud": -58.25918644596974,
+    "calificacion": 4.4
+},
+{
+    "id": 42,
     "nombre": "Helena Café Resto",
     "categoria": "Cafetería",
     "latitud": -32.483986490711686,
@@ -355,7 +379,7 @@
     "calificacion": 4.2
 },
 {
-    "id": 39,
+    "id": 43,
     "nombre": "Bella Vista",
     "categoria": "Cafetería",
     "latitud": -32.484895044411964,
@@ -363,7 +387,7 @@
     "calificacion": 4.4
 },
 {
-    "id": 40,
+    "id": 44,
     "nombre": "Nero Café de Especialidad",
     "categoria": "Cafetería",
     "latitud":  -32.484021394116425,
@@ -371,15 +395,15 @@
     "calificacion": 4.8
 },
 {
-    "id": 41,
+    "id": 45,
     "nombre": "Cultura Café",
     "categoria": "Cafetería",
-    "latitud": -32.475951516318254,
-    "longitud": -58.226739136597914,
+    "latitud": -32.47626349268186,
+    "longitud": -58.22675216789554,
     "calificacion": 4.7
 },
 {
-    "id": 42,
+    "id": 46,
     "nombre": "La Quinta Sabores Entrerrianos",
     "categoria": "Cafetería",
     "latitud":  -32.492485747601904,
@@ -387,7 +411,7 @@
     "calificacion": 4.5
 },
 {
-    "id": 43,
+    "id": 47,
     "nombre": "La Ris",
     "categoria": "Cafetería",
     "latitud": -32.483956710141385,
@@ -395,49 +419,57 @@
     "calificacion": 4.5
 },
 {
-    "id": 44,
+    "id": 48,
+    "nombre": "Atelier London",
+    "categoria": "Cafetería",
+    "latitud": -32.48505204549882,
+    "longitud": -58.23109286455951,
+    "calificacion": 3.3
+},
+{
+    "id": 49,
     "nombre": "Supermercado Gran Rex",
     "categoria": "Supermercado",
     "latitud": -32.489160522372394,
     "longitud": -58.230233993759896
 },
 {
-    "id": 45,
+    "id": 50,
     "nombre": "Supermercados Día",
     "categoria": "Supermercado",
     "latitud": -32.48845446305269,
     "longitud": -58.2416646917285
 },
 {
-    "id": 46,
+    "id": 51,
     "nombre": "Supermercado Supremo",
     "categoria": "Supermercado",
     "latitud": -32.486214375986336,
     "longitud": -58.232583807069915
 },
 {
-    "id": 47,
+    "id": 52,
     "nombre": "Maycon Autoservicio Mayorista",
     "categoria": "Supermercado",
     "latitud": -32.486908135327184,
     "longitud": -58.278830735993935
 },
 {
-    "id": 48,
+    "id": 53,
     "nombre": "Supermercado Martín",
     "categoria": "Supermercado",
     "latitud": -32.47286244110245,
     "longitud": -58.23702072657426
 },
 {
-    "id": 49,
+    "id": 54,
     "nombre": "Supermercado RT",
     "categoria": "Supermercado",
     "latitud": -32.485059307228525,
     "longitud": -58.25016458718946
 },
 {
-    "id": 50,
+    "id": 55,
     "nombre": "Remisería Voy!",
     "categoria": "Remises",
     "latitud": -32.480321543111025,
@@ -445,7 +477,7 @@
     "telefono": "3442 32-2000"
 },
 {
-    "id": 52,
+    "id": 56,
     "nombre": "Acción Remises",
     "categoria": "Remises",
     "latitud": -32.47877754772613,
@@ -453,7 +485,7 @@
     "telefono": "3442 64-1200"
 },
 {
-    "id": 53,
+    "id": 57,
     "nombre": "TAO Remises",
     "categoria": "Remises",
     "latitud": -32.48853690026868,
@@ -461,7 +493,7 @@
     "telefono": "3442 54-2772"
 },
 {
-    "id": 54,
+    "id": 58,
     "nombre": "Remises Concepción",
     "categoria": "Remises",
     "latitud": -32.48703652876836,
@@ -469,35 +501,35 @@
     "telefono": "3442 66-7570"
 },
 {
-    "id": 55,
+    "id": 59,
     "nombre": "Jefatura Departamental Uruguay",
     "categoria": "Policía",
     "latitud": -32.48538771400433,
     "longitud": -58.23211562750811
 },
 {
-    "id": 56,
+    "id": 60,
     "nombre": "Comisaría Primera",
     "categoria": "Policía",
     "latitud": -32.47814623240814,
     "longitud": -58.25149305817908
 },
 {
-    "id": 57,
+    "id": 61,
     "nombre": "Comisaría Segunda",
     "categoria": "Policía",
     "latitud": -32.488491323973754,
     "longitud": -58.25991321018806
 },
 {
-    "id": 58,
+    "id": 62,
     "nombre": "Comisaría Tercera",
     "categoria": "Policía",
     "latitud": -32.473518677479234,
     "longitud": -58.25416631902764
 },
 {
-    "id": 59,
+    "id": 63,
     "nombre": "Comisaría Cuarta",
     "categoria": "Policía",
     "latitud": -32.49196937407968,
